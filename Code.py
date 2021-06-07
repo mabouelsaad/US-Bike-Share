@@ -244,6 +244,7 @@ def data_sample(df):
     demand = input('Would you like to see sample of raw data? Yes/No\n').lower()
 
     if demand == 'yes':
+	pd.set_option('display.max_columns',200)
         print(df.sample(5))
         return data_sample(df)
     elif demand == 'no':
